@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <collectionViewItem id="cE4-zA-Pkl" customClass="AlbumItem" customModule="DiffableTest" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="rzZ-4l-iUx" id="4Am-lx-o1f"/>
+                <outlet property="textField" destination="YcR-ra-UJm" id="IOl-nV-GI9"/>
+                <outlet property="view" destination="OVY-if-d5p" id="HCE-UC-lNK"/>
+            </connections>
+        </collectionViewItem>
+        <customView id="OVY-if-d5p">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rzZ-4l-iUx">
+                    <rect key="frame" x="152" y="24" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rzZ-4l-iUx" secondAttribute="height" multiplier="1:1" id="xtl-7a-cdI"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSEveryone" id="Z14-xy-pD2"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YcR-ra-UJm">
+                    <rect key="frame" x="-2" y="0.0" width="343" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Album" id="E58-4D-9xs">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YcR-ra-UJm" secondAttribute="trailing" id="8D0-Es-SBz"/>
+                <constraint firstItem="rzZ-4l-iUx" firstAttribute="top" secondItem="OVY-if-d5p" secondAttribute="top" id="CnY-FL-CJC"/>
+                <constraint firstAttribute="bottom" secondItem="YcR-ra-UJm" secondAttribute="bottom" id="OHA-ZY-TbT"/>
+                <constraint firstItem="YcR-ra-UJm" firstAttribute="leading" secondItem="OVY-if-d5p" secondAttribute="leading" id="T2Z-LD-6KW"/>
+                <constraint firstItem="YcR-ra-UJm" firstAttribute="top" secondItem="rzZ-4l-iUx" secondAttribute="bottom" constant="8" id="jc5-oK-9ry"/>
+                <constraint firstItem="rzZ-4l-iUx" firstAttribute="centerX" secondItem="OVY-if-d5p" secondAttribute="centerX" id="vNj-74-fFJ"/>
+            </constraints>
+            <point key="canvasLocation" x="112.5" y="-77.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSEveryone" width="32" height="32"/>
+    </resources>
+</document>
