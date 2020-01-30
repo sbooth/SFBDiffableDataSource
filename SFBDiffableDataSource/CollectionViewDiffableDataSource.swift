@@ -10,7 +10,7 @@ public class CollectionViewDiffableDataSource<SectionIdentifierType, ItemIdentif
 	public typealias ItemProvider = (NSCollectionView, IndexPath, SectionIdentifierType, ItemIdentifierType) -> NSCollectionViewItem?
 	public typealias SupplementaryViewProvider = (NSCollectionView, NSCollectionView.SupplementaryElementKind, IndexPath, SectionIdentifierType) -> (NSView & NSCollectionViewElement)?
 
-	var supplementaryViewProvider: SupplementaryViewProvider?
+	public var supplementaryViewProvider: SupplementaryViewProvider?
 
 	private weak var collectionView: NSCollectionView?
 	private let itemProvider: ItemProvider
