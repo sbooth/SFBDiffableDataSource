@@ -462,7 +462,7 @@ extension DiffableDataSourceSnapshot: CustomDebugStringConvertible {
 
 		if !items.isEmpty {
 			result += "\(items.count) items, \(orderedSectionIdentifiers.count) sections, "
-			result += sections.map({ "\($1)" }).joined(separator: ", ")
+			result += sections.sorted(by: { $0.1.position < $1.1.position }).map({ "\($1)" }).joined(separator: ", ")
 		}
 		result += ")"
 		return result
